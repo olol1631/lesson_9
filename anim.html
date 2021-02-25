@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anim</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        div{
+            margin: 50px;
+        }
+        .wrap{
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+        }
+        .d1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid rgb(248, 203, 87);
+            background-color: rgb(250, 246, 140);
+            position: relative;
+            left: 0;
+            transition: all .5s;
+        }
+        .d1:hover{
+            transition: background-color 1.5s, border .3s ease .7s;
+            transform: scale(1.2);
+        }
+        .wrap:hover .d1{
+            border: 5px solid rgb(252, 113, 39);
+            
+        }
+        .d2{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(78, 117, 223);
+            position: relative;
+            left: 0;
+            animation-name: d2;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            transition: all 1.5s;
+        }
+        .d2:hover{
+            animation-play-state: paused;
+
+        }
+        .wrap:hover .d2{
+            background-color: rgb(230, 19, 19);
+        }
+        @keyframes d2{
+            0%{
+                left: -100px;
+            }
+            100%{
+                left: 500px;
+            }
+        }
+        .d4{
+            width: 100px;
+            height: 100px;
+            border-radius: 0% 100%;
+            background-color: rgb(66, 124, 97);
+            position: relative;
+            left: 0;
+            transition: background-color 1s;
+        }
+        .wrap:hover .d4{
+            animation-name: d4;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            transform-origin: right bottom;
+            animation-fill-mode: forwards;
+        }
+        @keyframes d4{
+            0%{
+                transform: rotate(0deg);
+                background-color: rgb(72, 197, 155);
+            }
+            100%{
+                transform: skewY(10deg);
+                transform: rotate(90deg);
+                background-color: rgb(86, 173, 115);
+            }
+        }
+        .d5{
+            width: 100px;
+            height: 100px;
+            border-radius: 100% 0 0 0;
+            background-color: rgb(225, 238, 225);
+            position: relative;
+            left: 0;
+            animation-name: d5;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes d5{
+            0%{
+                transform-origin: right bottom;
+                transform: rotate(0deg);
+            }
+            50%{
+                background-color: rgb(6, 143, 13);
+
+            }
+            100%{
+                transform-origin: right bottom;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <div class="d4"></div>
+        <div class="d5"></div>
+        
+    </div>
+</body>
+</html>
