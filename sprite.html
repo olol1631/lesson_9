@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sprite</title>
+    <style>
+        .wrapper{
+            display: flex;
+        }
+        .red_man  {
+            background: url(images/sprite.png) 0 0 no-repeat;
+            width: 611px;
+            height: 640px;
+            position: relative;
+            top: 0;
+            left: 0;
+            animation-name: anim;
+            animation-duration: .6s;
+            animation-timing-function: steps(5);
+            animation-iteration-count: infinite;
+        }
+        @keyframes anim {
+            0%{
+
+            }
+            100%{
+                background-position: -3055px 0;
+            }
+        }
+        .cat{
+            background: url(images/pantera_2.jpg) -1200px 300px no-repeat;
+            width: 400px;
+            height: 640px;
+            animation: cat 0.5s steps(3) infinite;
+            
+        }
+        @keyframes cat{
+            0%{
+
+            }
+            100%{
+                background-position: 0px 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="red_man"></div>
+        <div class="cat"></div>
+    </div>
+</body>
+</html>
